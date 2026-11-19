@@ -1,4 +1,4 @@
-# reflection
+# Basic quest reflection
 
 - **What helped:** The explanations placed beside each interactive step were more useful than a separate walkthrough because I could learn about channels, invoices, and preimages without leaving the control I was using. The progress tracker also made the next action clear.
 
