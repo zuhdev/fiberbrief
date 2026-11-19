@@ -8,7 +8,7 @@
 - `04-decrypted-result.png` — the buyer reads the original report after the payment reveals the preimage.
 - `05-fiberbrief-receipt.png` — the custom FiberBrief demo shows the sealed preview and its settled 1 CKB receipt.
 - `06-fiberbrief-unlocked.png` — the custom FiberBrief demo shows the unlocked research brief after payment.
-- `reflection-draft.md` — short reflection covering the required question and additional questions. Personalize the wording before submitting.
+- `reflection.md` — short reflection covering the required question and additional questions.
 
 ## Advanced demo
 
