@@ -1,11 +1,9 @@
 # Basic quest reflection
 
-The explanations beside each interactive step made the tutorial easy to follow. I could read about a node, channel, invoice, or preimage while I was looking at that exact part of the flow. I preferred this format to a live demo at the top with a separate walkthrough below because I did not have to keep switching between the explanation and the controls. The progress steps also helped me understand what was complete and what still needed attention.
+- **What helped:** The explanations placed beside each interactive step were more useful than a separate walkthrough because I could learn about channels, invoices, and preimages without leaving the control I was using. The progress tracker also made the next action clear.
 
-What stood out to me was that the payment did not directly reveal the report. The report stayed encrypted, and the successful Fiber payment revealed the preimage that served as the AES key. That made the payment and the unlock feel like one connected process instead of two separate actions.
+- **What I learned:** Payment reveals the invoice preimage; in this flow, that preimage is the AES key. I also learned why both channels must be `CHANNEL_READY`: total capacity is not enough—the route needs directional liquidity on A–B and B–C.
 
-I was unsure at first why both channels had to reach `CHANNEL_READY` before the invoice could be paid. The liquidity explanation made this clearer: the buyer needs outbound liquidity on A–B, while Bottle needs the right balance on B–C to forward the payment. Seeing the directional balances helped me understand why a channel can have capacity but still not support a payment in the direction I need.
+- **What I would build:** A marketplace for paid research briefs. A buyer could read a free preview, pay 1 CKB, and receive a cryptographically verified full brief. I would add author reputation because Fiber proves the correct content was unlocked, not that the research is accurate.
 
-I would like to build a marketplace for short research briefs and on-demand analysis using this pattern. A public preview could help buyers decide whether a brief is useful, while the full analysis would remain sealed until payment. I would also add reputation and dispute features because the cryptographic proof shows that the correct content was unlocked, but it does not prove that the claims inside the report are accurate.
-
-One change I would make is to keep the route balances and payment receipt visible together during settlement. The tutorial explains their relationship, but showing both in the same view would make the connection even clearer for someone learning Fiber for the first time.
+- **One improvement:** Show the A–B and B–C directional balances beside the payment receipt. That would make the relationship between route readiness, liquidity, and settlement immediately clear.
