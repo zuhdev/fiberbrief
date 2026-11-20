@@ -1,15 +1,17 @@
 # FiberBrief submission materials
 
+Repository: https://github.com/zuhdev/fiberbrief
+
 ## Basic evidence
 
 - `01-setup-channel-ready.png` — Buyer A and Seller C channels are open and the route is funded.
 - `02-before-payment.png` — the buyer has the encrypted offer and AES-GCM rejects decryption without the key.
 - `03-payment-receipt.png` — 1 CKB received, 0.001 CKB routing fee, 1.001 CKB total, and the payment hash.
 - `04-decrypted-result.png` — the buyer reads the original report after the payment reveals the preimage.
-- `05-fiberbrief-receipt.png` — the custom FiberBrief demo shows the sealed preview and its settled 1 CKB receipt.
-- `06-fiberbrief-unlocked.png` — the custom FiberBrief demo shows the unlocked research brief after payment.
-- `reflection.md` — short reflection covering the required question and additional questions.
-- `reflection-advanced.md` — separate reflection on the customized FiberBrief implementation and Advanced workflow.
+- [`05-fiberbrief-receipt.png`](05-fiberbrief-receipt.png) — the custom FiberBrief demo shows the sealed preview and its settled 1 CKB receipt.
+- [`06-fiberbrief-unlocked.png`](06-fiberbrief-unlocked.png) — the custom FiberBrief demo shows the unlocked research brief after payment.
+- [`reflection.md`](reflection.md) — short reflection covering the required question and additional questions.
+- [`reflection-advanced.md`](reflection-advanced.md) — separate reflection on the customized FiberBrief implementation and Advanced workflow.
 
 ## Advanced demo
 

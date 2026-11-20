@@ -1,6 +1,6 @@
 # FiberBrief
 
-FiberBrief is a browser-only pay-to-unlock research brief demo on CKB Testnet. A seller publishes a free preview and an encrypted full brief. The seller uses the AES-256-GCM key as the preimage of a 1 CKB Fiber invoice. After the buyer pays, Fiber reveals the preimage and the app verifies it before decrypting the brief.
+FiberBrief is a browser-only pay-to-unlock research brief demo on CKB Testnet. A seller publishes a free preview and an encrypted full brief. The app uses the AES-256-GCM key as the preimage of a 1 CKB Fiber invoice. After the buyer pays, Fiber reveals the preimage and the app verifies it before decrypting the brief.
 
 Tutorial reference: https://www.fiber.world/docs/build/encrypted-data-payment
 
@@ -14,6 +14,17 @@ Tutorial reference: https://www.fiber.world/docs/build/encrypted-data-payment
 - Added a settled receipt with amount, routing fee, total, and payment hash.
 - Added a downloadable Markdown copy of the unlocked brief.
 - Added separate FiberBrief browser-node storage keys so the demo does not reuse the tutorial's saved identities.
+
+## Completed Testnet flow
+
+The demo was run end to end on Fiber Testnet. The buyer paid 1 CKB, the route fee was 0.001 CKB, and the brief unlocked only after both cryptographic checks passed:
+
+- The revealed preimage matched the invoice payment hash.
+- The decrypted bytes matched the sealed content hash.
+
+Payment hash from the completed run:
+
+`0x29a6ed610a3db52624df9efae6a8ffcb06e2fdb96f8dc47418a5501d123303ae`
 
 ## Run locally
 
@@ -48,6 +59,14 @@ npm run build
 ```
 
 The test suite covers invoice validation, durable payment-attempt handling, retries, expiry, and uncertain payment outcomes.
+
+## Evidence and reflections
+
+- [Advanced payment receipt](submission/05-fiberbrief-receipt.png)
+- [Advanced unlocked result](submission/06-fiberbrief-unlocked.png)
+- [Basic reflection](submission/reflection.md)
+- [Advanced reflection](submission/reflection-advanced.md)
+- [Full submission evidence index](submission/README.md)
 
 ## Safety notes
 
