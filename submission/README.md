@@ -9,6 +9,7 @@
 - `05-fiberbrief-receipt.png` — the custom FiberBrief demo shows the sealed preview and its settled 1 CKB receipt.
 - `06-fiberbrief-unlocked.png` — the custom FiberBrief demo shows the unlocked research brief after payment.
 - `reflection.md` — short reflection covering the required question and additional questions.
+- `reflection-advanced.md` — separate reflection on the customized FiberBrief implementation and Advanced workflow.
 
 ## Advanced demo
 
